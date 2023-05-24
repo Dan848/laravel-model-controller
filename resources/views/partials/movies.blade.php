@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
         @foreach ($movies as $movie)
-        <div class="col-12 col-md-4 g-5 d-flex justify-content-center">
+        <a href="{{route("movie", [$movie["id"]])}}" class="col-12 col-md-4 g-5 d-flex justify-content-center">
             <div class="position-relative card-box text-white" id="{{$movie["id"]}}">
                 <!-- IMAGE -->
                 <img class="cover" src="{{$movie["image"]}}" alt="{{$movie["title"]}}">
@@ -22,7 +22,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </a>
         @endforeach
     </div>
 </div>

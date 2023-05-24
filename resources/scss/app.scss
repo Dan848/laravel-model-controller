@@ -52,6 +52,11 @@ $fa-font-path: "../fonts/webfonts" !default;
         }
     }
 }
+
+.poster{
+    width: 400px;
+}
+
 @media only screen and (min-width: 500px) {
     .cover {
         width: 300px!important;

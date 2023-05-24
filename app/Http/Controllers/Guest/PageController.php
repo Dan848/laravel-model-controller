@@ -12,7 +12,7 @@ class PageController extends Controller
         $movies = Movie::all();
         return view('home', compact('movies'));
     }
-    public function showDescName($order){
+    public function showIndexOrder($order){
             if($order === "vote"){
                 $movies = Movie::orderBy($order, "desc")->get();
             }
@@ -20,5 +20,9 @@ class PageController extends Controller
                 $movies = Movie::orderBy($order, "asc")->get();
             }
         return view('home', compact('movies', 'order'));
+    }
+    public function show($id){
+        $movie = Movie::where("id", $id)->get();
+        return view('content.movie', compact('movie'));
     }
 }

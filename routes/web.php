@@ -15,4 +15,5 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Guest\PageController;
 
 Route::get('/', [PageController::class, "index"])->name("home");
-Route::get('/desc/{order}', [PageController::class, "showDescName"])->name("order");
+Route::get('/desc/{order}', [PageController::class, "showIndexOrder"])->name("order");
+Route::get('/movie/{id}', [PageController::class, "show"])->name("movie");
